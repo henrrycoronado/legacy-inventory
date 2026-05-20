@@ -1,0 +1,5 @@
+backend "s3" {
+    bucket = "terraform-bucket-hc"
+    key    = "inventory/terraform.tfstate"
+    region = "us-east-1"
+  }
