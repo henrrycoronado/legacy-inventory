@@ -1,0 +1,168 @@
+2026-05-20T23:06:46.7958410Z Current runner version: '2.334.0'
+2026-05-20T23:06:46.7983803Z ##[group]Runner Image Provisioner
+2026-05-20T23:06:46.7984661Z Hosted Compute Agent
+2026-05-20T23:06:46.7985293Z Version: 20260213.493
+2026-05-20T23:06:46.7986178Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-05-20T23:06:46.7986981Z Build Date: 2026-02-13T00:28:41Z
+2026-05-20T23:06:46.7987745Z Worker ID: {c929d7a3-3b79-4c15-8a46-e3571a908669}
+2026-05-20T23:06:46.7988455Z Azure Region: westus
+2026-05-20T23:06:46.7989028Z ##[endgroup]
+2026-05-20T23:06:46.7990467Z ##[group]Operating System
+2026-05-20T23:06:46.7991177Z Ubuntu
+2026-05-20T23:06:46.7991648Z 24.04.4
+2026-05-20T23:06:46.7992125Z LTS
+2026-05-20T23:06:46.7992678Z ##[endgroup]
+2026-05-20T23:06:46.7993209Z ##[group]Runner Image
+2026-05-20T23:06:46.7993768Z Image: ubuntu-24.04
+2026-05-20T23:06:46.7994309Z Version: 20260513.135.3
+2026-05-20T23:06:46.7995478Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260513.135/images/ubuntu/Ubuntu2404-Readme.md
+2026-05-20T23:06:46.7997322Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260513.135
+2026-05-20T23:06:46.7998222Z ##[endgroup]
+2026-05-20T23:06:46.7999357Z ##[group]GITHUB_TOKEN Permissions
+2026-05-20T23:06:46.8001202Z Contents: read
+2026-05-20T23:06:46.8001784Z Metadata: read
+2026-05-20T23:06:46.8002361Z Packages: read
+2026-05-20T23:06:46.8002899Z ##[endgroup]
+2026-05-20T23:06:46.8005159Z Secret source: Actions
+2026-05-20T23:06:46.8006533Z Prepare workflow directory
+2026-05-20T23:06:46.8352375Z Prepare all required actions
+2026-05-20T23:06:46.8392370Z Getting action download info
+2026-05-20T23:06:47.3145493Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2026-05-20T23:06:47.8820987Z Download action repository 'actions/setup-node@v3' (SHA:3235b876344d2a9aa001b8d1453c930bba69e610)
+2026-05-20T23:06:48.1172587Z Complete job name: build-and-test
+2026-05-20T23:06:48.1916279Z ##[group]Run actions/checkout@v3
+2026-05-20T23:06:48.1917374Z with:
+2026-05-20T23:06:48.1917982Z   repository: henrrycoronado/legacy-inventory
+2026-05-20T23:06:48.1918782Z   token: ***
+2026-05-20T23:06:48.1919228Z   ssh-strict: true
+2026-05-20T23:06:48.1919674Z   persist-credentials: true
+2026-05-20T23:06:48.1920167Z   clean: true
+2026-05-20T23:06:48.1920601Z   sparse-checkout-cone-mode: true
+2026-05-20T23:06:48.1921135Z   fetch-depth: 1
+2026-05-20T23:06:48.1921564Z   fetch-tags: false
+2026-05-20T23:06:48.1921985Z   lfs: false
+2026-05-20T23:06:48.1922399Z   submodules: false
+2026-05-20T23:06:48.1922843Z   set-safe-directory: true
+2026-05-20T23:06:48.1923640Z ##[endgroup]
+2026-05-20T23:06:48.2845350Z Syncing repository: henrrycoronado/legacy-inventory
+2026-05-20T23:06:48.2847593Z ##[group]Getting Git version info
+2026-05-20T23:06:48.2848470Z Working directory is '/home/runner/work/legacy-inventory/legacy-inventory'
+2026-05-20T23:06:48.2849650Z [command]/usr/bin/git version
+2026-05-20T23:06:48.4037212Z git version 2.54.0
+2026-05-20T23:06:48.4061106Z ##[endgroup]
+2026-05-20T23:06:48.4078141Z Temporarily overriding HOME='/home/runner/work/_temp/a18a16ca-2fec-45ff-b566-e50643a72081' before making global git config changes
+2026-05-20T23:06:48.4080888Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-20T23:06:48.4083421Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-inventory/legacy-inventory
+2026-05-20T23:06:48.4341100Z Deleting the contents of '/home/runner/work/legacy-inventory/legacy-inventory'
+2026-05-20T23:06:48.4345297Z ##[group]Initializing the repository
+2026-05-20T23:06:48.4350011Z [command]/usr/bin/git init /home/runner/work/legacy-inventory/legacy-inventory
+2026-05-20T23:06:48.4800321Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-05-20T23:06:48.4801699Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-05-20T23:06:48.4803741Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-05-20T23:06:48.4806060Z hint: call:
+2026-05-20T23:06:48.4806826Z hint:
+2026-05-20T23:06:48.4807655Z hint: 	git config --global init.defaultBranch <name>
+2026-05-20T23:06:48.4808299Z hint:
+2026-05-20T23:06:48.4808900Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-05-20T23:06:48.4809879Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-05-20T23:06:48.4810648Z hint:
+2026-05-20T23:06:48.4811075Z hint: 	git branch -m <name>
+2026-05-20T23:06:48.4811687Z hint:
+2026-05-20T23:06:48.4812774Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-05-20T23:06:48.4813976Z Initialized empty Git repository in /home/runner/work/legacy-inventory/legacy-inventory/.git/
+2026-05-20T23:06:48.4817003Z [command]/usr/bin/git remote add origin https://github.com/henrrycoronado/legacy-inventory
+2026-05-20T23:06:48.5017371Z ##[endgroup]
+2026-05-20T23:06:48.5018262Z ##[group]Disabling automatic garbage collection
+2026-05-20T23:06:48.5020047Z [command]/usr/bin/git config --local gc.auto 0
+2026-05-20T23:06:48.5048178Z ##[endgroup]
+2026-05-20T23:06:48.5048950Z ##[group]Setting up auth
+2026-05-20T23:06:48.5053828Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-20T23:06:48.5083832Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-20T23:06:48.7280458Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-20T23:06:48.7310794Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-20T23:06:48.7552242Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-05-20T23:06:48.7587196Z ##[endgroup]
+2026-05-20T23:06:48.7588957Z ##[group]Fetching the repository
+2026-05-20T23:06:48.7596412Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +3f271e5cf340eddca59cbb8b78a021d5b4f46fc2:refs/remotes/origin/develop
+2026-05-20T23:06:49.2096605Z remote: Enumerating objects: 10, done.        
+2026-05-20T23:06:49.2097919Z remote: Counting objects:  10% (1/10)        
+2026-05-20T23:06:49.2098997Z remote: Counting objects:  20% (2/10)        
+2026-05-20T23:06:49.2100099Z remote: Counting objects:  30% (3/10)        
+2026-05-20T23:06:49.2101196Z remote: Counting objects:  40% (4/10)        
+2026-05-20T23:06:49.2102317Z remote: Counting objects:  50% (5/10)        
+2026-05-20T23:06:49.2104157Z remote: Counting objects:  60% (6/10)        
+2026-05-20T23:06:49.2106280Z remote: Counting objects:  70% (7/10)        
+2026-05-20T23:06:49.2108181Z remote: Counting objects:  80% (8/10)        
+2026-05-20T23:06:49.2109835Z remote: Counting objects:  90% (9/10)        
+2026-05-20T23:06:49.2111832Z remote: Counting objects: 100% (10/10)        
+2026-05-20T23:06:49.2113834Z remote: Counting objects: 100% (10/10), done.        
+2026-05-20T23:06:49.2116096Z remote: Compressing objects:  14% (1/7)        
+2026-05-20T23:06:49.2117997Z remote: Compressing objects:  28% (2/7)        
+2026-05-20T23:06:49.2119981Z remote: Compressing objects:  42% (3/7)        
+2026-05-20T23:06:49.2122006Z remote: Compressing objects:  57% (4/7)        
+2026-05-20T23:06:49.2123874Z remote: Compressing objects:  71% (5/7)        
+2026-05-20T23:06:49.2126111Z remote: Compressing objects:  85% (6/7)        
+2026-05-20T23:06:49.2128204Z remote: Compressing objects: 100% (7/7)        
+2026-05-20T23:06:49.2129852Z remote: Compressing objects: 100% (7/7), done.        
+2026-05-20T23:06:49.2131909Z remote: Total 10 (delta 0), reused 9 (delta 0), pack-reused 0 (from 0)        
+2026-05-20T23:06:49.2648432Z From https://github.com/henrrycoronado/legacy-inventory
+2026-05-20T23:06:49.2650704Z  * [new ref]         3f271e5cf340eddca59cbb8b78a021d5b4f46fc2 -> origin/develop
+2026-05-20T23:06:49.2895179Z ##[endgroup]
+2026-05-20T23:06:49.2897951Z ##[group]Determining the checkout info
+2026-05-20T23:06:49.2900820Z ##[endgroup]
+2026-05-20T23:06:49.2903193Z ##[group]Checking out the ref
+2026-05-20T23:06:49.2906510Z [command]/usr/bin/git checkout --progress --force -B develop refs/remotes/origin/develop
+2026-05-20T23:06:49.3099891Z Switched to a new branch 'develop'
+2026-05-20T23:06:49.3102257Z branch 'develop' set up to track 'origin/develop'.
+2026-05-20T23:06:49.3110252Z ##[endgroup]
+2026-05-20T23:06:49.3146576Z [command]/usr/bin/git log -1 --format='%H'
+2026-05-20T23:06:49.3168056Z '3f271e5cf340eddca59cbb8b78a021d5b4f46fc2'
+2026-05-20T23:06:49.3480331Z ##[group]Run actions/setup-node@v3
+2026-05-20T23:06:49.3481432Z with:
+2026-05-20T23:06:49.3482151Z   node-version: 20
+2026-05-20T23:06:49.3482972Z   always-auth: false
+2026-05-20T23:06:49.3483828Z   check-latest: false
+2026-05-20T23:06:49.3484953Z   token: ***
+2026-05-20T23:06:49.3485709Z ##[endgroup]
+2026-05-20T23:06:49.5753050Z Found in cache @ /opt/hostedtoolcache/node/20.20.2/x64
+2026-05-20T23:06:49.5760097Z ##[group]Environment details
+2026-05-20T23:06:52.2090902Z node: v20.20.2
+2026-05-20T23:06:52.2091349Z npm: 10.8.2
+2026-05-20T23:06:52.2091610Z yarn: 1.22.22
+2026-05-20T23:06:52.2094350Z ##[endgroup]
+2026-05-20T23:06:52.2220250Z ##[group]Run npm install
+2026-05-20T23:06:52.2220555Z [36;1mnpm install[0m
+2026-05-20T23:06:52.2264335Z shell: /usr/bin/bash -e {0}
+2026-05-20T23:06:52.2264598Z ##[endgroup]
+2026-05-20T23:06:55.3908410Z 
+2026-05-20T23:06:55.3914095Z added 68 packages, and audited 69 packages in 3s
+2026-05-20T23:06:55.3914464Z 
+2026-05-20T23:06:55.3914675Z 15 packages are looking for funding
+2026-05-20T23:06:55.3914995Z   run `npm fund` for details
+2026-05-20T23:06:55.3918012Z 
+2026-05-20T23:06:55.3918244Z found 0 vulnerabilities
+2026-05-20T23:06:55.4072993Z ##[group]Run npm run test
+2026-05-20T23:06:55.4073296Z [36;1mnpm run test[0m
+2026-05-20T23:06:55.4109058Z shell: /usr/bin/bash -e {0}
+2026-05-20T23:06:55.4109327Z ##[endgroup]
+2026-05-20T23:06:55.5244982Z 
+2026-05-20T23:06:55.5246149Z > legacy-inventory@1.0.0 test
+2026-05-20T23:06:55.5246712Z > node test/app.test.js
+2026-05-20T23:06:55.5246917Z 
+2026-05-20T23:06:55.5534852Z === Ejecutando Pruebas Unitarias de Inventario ===
+2026-05-20T23:06:55.5539799Z ✅ PASSED: Control de stock validado correctamente.
+2026-05-20T23:06:55.5754511Z Post job cleanup.
+2026-05-20T23:06:55.7545707Z Post job cleanup.
+2026-05-20T23:06:55.8307629Z [command]/usr/bin/git version
+2026-05-20T23:06:55.8343458Z git version 2.54.0
+2026-05-20T23:06:55.8390488Z Temporarily overriding HOME='/home/runner/work/_temp/b7dc358c-1072-47ed-8b60-7c7753bfbe2d' before making global git config changes
+2026-05-20T23:06:55.8392172Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-20T23:06:55.8395510Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/legacy-inventory/legacy-inventory
+2026-05-20T23:06:55.8428580Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-20T23:06:55.8459610Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-20T23:06:55.8680719Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-20T23:06:55.8704109Z http.https://github.com/.extraheader
+2026-05-20T23:06:55.8715499Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-20T23:06:55.8743753Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-20T23:06:55.9067179Z Cleaning up orphan processes
+2026-05-20T23:06:55.9339673Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v3, actions/setup-node@v3. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
