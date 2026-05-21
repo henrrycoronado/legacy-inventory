@@ -7,5 +7,5 @@ variable "app_port" {
 variable "iam_profile_name" {
   description = "Nombre exacto del iam_instance_profile"
   type        = string
-  default     = "LabRole" 
+  default     = "LabInstanceProfile"
 }
